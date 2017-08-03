@@ -1,9 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
 .content_style {
     font-family: helvetica, sans-serif;
     font-size: 18px;
     font-variant: small-caps;
-    background: #A4FFDD;
+    background-image:url("http://img0.liveinternet.ru/images/attach/b/3//41/244/41244721_1237472638_golubuye4.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
     min-height: 100vh;
     display: flex;
     flex-direction:column;
@@ -12,16 +13,15 @@
 {
   display: flex;
   justify-content: space-between;
-  background-color:#5ADFAC ;
+  background-color:rgba(15, 190, 240, 0.84);
   font-size: 20px;
   height: 75px;
   align-items: center;
-  margin-top:-20px;
-  margin-bottom:10px;
-  padding: -10px;
+  margin-top:-50px;
+  margin-bottom:20px;
 }
 main{
-	margin:10px;
+	margin:20px;
 	flex: 1 0 auto;
 }
 .menuitems_container
@@ -39,7 +39,10 @@ main{
   padding:15px;
   font-size: 18px;
 }
-
+.menuitem::before
+{
+    content:"*";
+}
 .footer
 {
   font-size:13px;
