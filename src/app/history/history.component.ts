@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {historyElem} from '../models/historyElem';
+import {HistoryElem} from '../models/historyElem';
+import { Observable } from "rxjs/Observable";
+import {HistoryService} from '../services/history.service';
+import {Http} from '@angular/http';
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
@@ -7,20 +10,12 @@ import {historyElem} from '../models/historyElem';
 })
 export class HistoryComponent implements OnInit {
   
- 
-  constructor()
-   { 
-    let x:historyElem=new historyElem();
-    x.date="01.01.2017";
-    x.city="Kiev";
-    x.dayTemp=10;
-    x.numOfDays=1;
-    
-    this.historyList=[x];
-   }
-    historyList: historyElem[];
+  historyList: Observable<HistoryElem[]>;
+  constructor(private historyService: HistoryService){}
   ngOnInit() {
-    
+     this.getHistory();
   }
-
+ getHistory():void{
+    this.historyList = this.historyService.getHistory();
+  }
 }

@@ -17,6 +17,7 @@ import { Observable } from "rxjs/Observable";
   }
   get Cities(): Observable<selectedCity[]>
   {
+
       return this.http.get(this.apipath+'cities').map(res => res.json());
   }
   deleteCity(name: string)

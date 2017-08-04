@@ -7,6 +7,10 @@ import { WeatherComponent } from './weather/weather.component';
 import { HistoryComponent } from './history/history.component';
 import { CitiesComponent } from './cities/cities.component';
 
+import { HistoryService} from './services/history.service';
+import { WeatherService} from './services/forecast.service';
+import {CitiesService} from './services/cities.service';
+
 @NgModule({
   declarations: [
     AppComponent,

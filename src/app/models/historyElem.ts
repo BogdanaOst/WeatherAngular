@@ -1,4 +1,4 @@
-export class historyElem
+export class HistoryElem
 {
     date:string;
     city:string;
