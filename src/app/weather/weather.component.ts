@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
-  constructor() { }
-  city:string;
+  city:string='';
   days:number;
+  constructor() {
+   }
   ngOnInit() {
   }
 

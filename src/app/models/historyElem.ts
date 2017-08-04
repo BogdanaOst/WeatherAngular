@@ -4,5 +4,5 @@ export class historyElem
     city:string;
     numOfDays:number;
     dayTemp:number;
-    icom:string;
+    icon:string;
 }

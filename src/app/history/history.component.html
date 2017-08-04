@@ -1,3 +1,5 @@
-<p>
- History works!
-</p>
+ <div *ngFor="let historyElem of historyList" >
+    <p>Date: {{historyElem.date}}</p>
+    <p>City: {{historyElem.city}}</p>
+    <p>Temperature: {{historyElem.dayTemp}}</p>
+    <p>Days requested: {{historyElem.numOfDays}}</p>
